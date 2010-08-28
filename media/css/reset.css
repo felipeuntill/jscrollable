@@ -1,0 +1,12 @@
+/* ################################################################
+
+################################################################ */
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, button, pre, a, abbr, acronym, address, cite, code, ins, kbd, q, s, samp, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0 none; font-size: 100%; vertical-align: baseline; background: transparent; font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #616161; }
+img { margin: 0; padding: 0; border: 0; outline: 0 none; } 
+textarea { resize: none; font-size: 100%; font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #616161; }
+input { font-size: 100%; font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #616161; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+table { border-collapse: collapse; border-spacing: 0; }

@@ -1,0 +1,3 @@
+div#general { width: 800px; margin: 0 auto; }
+div#header { float: left; width: 150px; position: absolute; top: 100px; }
+div#content { float: right; width: 630px; }
