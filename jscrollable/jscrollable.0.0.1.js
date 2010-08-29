@@ -1,37 +1,80 @@
  $(document).ready( function() {
 	
-	//Initializing the plugin	
+	// Initializing the plugin	
 	$.fn.jScrollable = function(options){
 		
-		//declaring a extended variable to alocate all options.
+		// Declaring a extended variable to alocate all options.
 		options = $.extend({
-			
-			// if the scrollable object want move on the Y axis.
+			// Variavle responsable of alocate the instance object
+			referer   		: $(this),
+			// Variable responsable of alocate the Y axis of the instanced object before the move.
+			yaxis 			: $(this).position().top,
+			// Variable responsable of alocate the X axis of the instanced object before the move.
+			xaxis 			: $(this).position().left,
+			// If the scrollable object want move on the Y axis.
 			ymove			: true,
-			// if the scrollable object want move on the X axis.
+			// If the scrollable object want move on the X axis.
 			xmove			: false,
-			// if the scroll move are animated.
-			animate		 	: true,
-			// variavle resposable of alocate the delay of the scroll move.
+			// Variavle resposable of alocate the delay of the scroll move.
 			scrolldelay		: 500
 				
 		}, options);
 		
-		referer = $(this);
-		referenceaxis = $(this).position().top;
-		$(referer).css({ position : 'absolute' , top : 'referenceaxis'});
-
+		// Setting the position absolute to matched object and our axis references.
+		$(options.referer).css({ 
+								position	 : 'absolute' ,
+								top			 : options.yaxis,
+								left		 : options.xaxis
+								});
+		// The Scroll() event.
 		$(window).scroll(function(){
 			
-			var offset = referenceaxis + $(document).scrollTop() + "px";
+			// variable responsable of alocate the new position of the matched object on the Y axis.
+			var yoffset = options.yaxis + $(document).scrollTop() + "px";
+			// variable responsable of alocate the new position of the matched object on the X axis.
+			var xoffset = options.xaxis + $(document).scrollLeft() + "px";
 			
-			$(referer).animate({
-				top: offset
-			}, {
-				duration: 500,
-				queue: false
-			});
+			// if ymove = true and  xmove = true, the object want to be moved on the Y and X axis.
+			if (options.ymove && options.xmove) {
+		
+				// animating the plugin to move the object on the Y and X axis with the (scrolldelay) value of delay.		 
+				$(options.referer).animate({
+					top		: yoffset,
+					left	: xoffset
+					}, {
+						duration: options.scrolldelay,
+						queue: false
+				});
+			// if ymove = true and  xmove = false, the object want to be moved on the Y axis.	
+			} else if ( options.ymove && options.xmove == false ) {
+				
+				// animating the plugin to move the object on the Y axis with the (scrolldelay) value of delay.
+				$(options.referer).animate({
+					top		: yoffset
+					}, {
+						duration: options.scrolldelay,
+						queue: false
+				});
+			// if ymove = false and  xmove = true, the object want to be moved on the X axis.	
+			} else if ( options.ymove == false && options.xmove ) {
+				
+				// animating the plugin to move the object on the X axis with the (scrolldelay) value of delay.
+				$(options.referer).animate({
+					left		: xoffset
+					}, {
+						duration: options.scrolldelay,
+						queue: false
+				});
+				
+			}
 			
+			// if ymove = false and  xmove = false, the object dont wants to be moved.
+			else {
+				
+				// if the condition enter here then 
+				return 'You dont need of this plugin, disable him';
+				
+			}
 			
 		});
 		

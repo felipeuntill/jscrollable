@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <title>JScrollable - A jQuery Powered Widget</title>
+    <title>jScrollable - A jQuery Powered Widget</title>
     <link rel="stylesheet" type="text/css" href="media/css/loader.css" media="all" />
     <script type="text/javascript" src="media/libs/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="jscrollable/jscrollable.0.0.1.js"></script>
@@ -25,9 +25,10 @@
         </div>
         <script type="text/javascript">
              $(document).ready( function() {
-                
-                	$('#header').jScrollable({});
-            
+                	$('#header').jScrollable({
+                        xmove        : true,
+                        scrolldelay  : 400 
+                    });
             });
         </script>
         <div id="content">
