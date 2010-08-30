@@ -1,3 +1,14 @@
+/*!
+ * jScrollable Javascript Plugin v0.0.1
+ * http://code.google.com/p/jscrollable/
+ *
+ * Copyright 2010, Felipe Assuncao
+ * Dual licensed under the GPL Version 2 license.
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * Date: 29/09/2010
+ */
+
  $(document).ready( function() {
 	
 	// Initializing the plugin	
