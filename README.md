@@ -1,6 +1,3 @@
-# jscrollable
-Automatically exported from code.google.com/p/jscrollable
-____
 ![alt tag](https://raw.githubusercontent.com/felipeuntill/jscrollable/master/media/images/jscrollable.jpg)
 
 The best way to create floating objects
