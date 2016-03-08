@@ -38,5 +38,5 @@ Parameters:
 
 Credits:
 --
-Creator: * Felipe Assunção ( felipeillustrator(a)gmail.com ). </br>
-Documenter: * Leandro Bisson ( leandro.bisson(a)gmail.com ).
+Creator: * Felipe Assunção ( felipeassuncao.net(at)gmail.com ). </br>
+Documenter: * Leandro Bisson ( leandro.bisson(at)gmail.com ).
